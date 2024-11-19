@@ -13,6 +13,10 @@ body{
     box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.334) !important;
     border-color: rgba(255, 0, 0, 0.5)  !important; 
 }
+::selection {
+    background-color:#FEC260; 
+    color: #000000; 
+}
 /*********** End Global Styles  ***********/
 
 
