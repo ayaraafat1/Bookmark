@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- ===== favicon ===== -->
+    <link rel="icon" href="./image/star.png" />
+    <!-- ============ Start CORE FONT ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ============ End CORE FONT ============ -->
+
+    <!-- ============ Start FONTAWESOME LIBRAIRY ============ -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ============ End FONTAWESOME LIBRAIRY ============ -->
+
+    <!-- ============ Start BOOTSTRAP CSS ============ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- ============ End BOOTSTRAP CSS ============ -->
+
+    <!-- ============ Start MAIN CSS ============ -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- ============ End MAIN CSS ============ -->
+  </head>
+
+  <body>
+    <!--  ============  Start  main   ============ -->
+    <main class="interface py-5 position-relative">
+      
+      <!--  ============  Start  Section   ============ -->
+      <section
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="py-2 position-relative text-center">Bookmarker</h1>
+        <div
+          class="bookmark-body bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2 class="text-center">
+            <span class="title-icon1"
+              ><i class="fa-solid fa-bookmark"></i
+            ></span>
+            Bookmark your favorite sites
+            <span class="title-icon2"
+              ><i class="fa-solid fa-bookmark"></i
+            ></span>
+          </h2>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center"
+          >
+            <label for="siteName" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name
+            </label>
+            <input
+              oninput="checkNameValid()"
+              type="text"
+              name="site-name"
+              id="siteName"
+              class="form-control"
+              placeholder="Bookmark Name"
+            />
+          </div>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center"
+          >
+            <label for="siteURL" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-2"></i>
+              Site URL
+            </label>
+            <input
+              oninput="checkURLValid()"
+              type="text"
+              name="site-url"
+              id="siteURL"
+              class="form-control"
+              placeholder="Website URL"
+            />
+          </div>
+          <button
+            onclick="submitSite()"
+            class="btn btn-submit px-5"
+            id="submit-btn"
+          >
+            Submit
+          </button>
+        </div>
+
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </section>
+      <!--  ============  End  Section   ============ -->
+
+    <!--*================ Start Model Message ===============-->
+    <div class="  position-absolute top-0 start-0 bottom-0 end-0 w-100  d-flex justify-content-center align-items-center message display-message" >
+      <div class="max-w bg-white p-4 pb-2 rounded-3 animation anim">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            <i class="fa-solid fa-circle me-2" style="color: #fa0000"></i
+            ><i class="fa-solid fa-circle me-2" style="color: #f6fa00"></i
+            ><i class="fa-solid fa-circle" style="color: #00fa00"></i>
+          </h1>
+          <button
+            type="button"
+            class="btn-close ms-auto"
+            onclick="closeMassage()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p class="special pt-4 pb-0">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <p>
+            <i class="fa-regular fa-circle-right" style="color: #db4d00"></i>
+            Site name must contain at least 3 characters
+          </p>
+          <p>
+            <i class="fa-regular fa-circle-right" style="color: #db4d00"></i>
+            Site URL must be a valid one
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--================ End Model Message =================-->
+
+    </main>
+    <!--  ============  End  main   ============ -->
+
+    
+
+
+
+    <!-- ============ Start BOOTSTRAP JS ============ -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ============ End BOOTSTRAP JS ============ -->
+
+    <!-- ============ Start Main JS ============ -->
+    <script src="js/index.js"></script>
+    <!-- ============ End Main JS ============ -->
+  </body>
+</html>
