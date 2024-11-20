@@ -133,9 +133,4 @@ table .btn-delete
     
     transform: translateY(-50px);
 }
-@media screen and (max-width: 992px) {
-    .message{
-        height: 100% !important;
-    }
-}
 /*********** End  Model Message  ***********/
