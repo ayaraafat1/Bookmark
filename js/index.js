@@ -128,6 +128,9 @@ function closeMassage() {
 function clearForm() {
   siteNameInput.value = null;
   siteUrlInput.value = null;
+
+  siteNameInput.classList.remove("is-valid");
+  siteUrlInput.classList.remove("is-valid");
 }
 
 // ?========================== End Functions
