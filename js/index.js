@@ -43,7 +43,7 @@ function submitSite() {
 // Function to display site data on the page
 function displayData() {
   var cartona = "";
-  for (var i = 0; i < siteList.length; i++) {
+  for (var i = 0; i < siteList.length-1; i++) {
     cartona += createRows(i); // Generate HTML content for each site
   }
 
